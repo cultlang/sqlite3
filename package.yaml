@@ -1,0 +1,61 @@
+id: Sqlite3
+namespace: Cultlang
+shortname: Sqlite3 Bindings for Cultlang
+version: "1.0.0"
+repo: https://github.com/cultlang/sqlite3
+entry-name: cultsqlite
+dependencies:
+  - Util@OffByOneStudios
+  - Types@OffByOneStudios
+  - Lisp@OffByOneStudios
+
+include-directories:
+  - "${CMAKE_SOURCE_DIR}/deps/sqlite3"
+  
+vendor-dependencies:
+  x86_64-pc-windows-msvccoff: []
+  osx_x64_clang: []
+  debian_x64_gcc: []
+
+platform-dependencies:
+  x86_64-pc-windows-msvccoff: []
+  x86_64-pc-windows-msvccoff: []
+  osx_x64_clang: []
+  debian_x64_gcc: []
+
+platform-compile-flags:
+  x86_64-pc-windows-msvccoff:
+    - "/std:c++latest"
+  osx_x64_clang: 
+    - "-std=c++1z"
+    - "-stdlib=libc++"
+    - "-Wc++11-extensions"
+  debian_x64_gcc: 
+    - "-std=gnu++1z"
+    - "-pthread"
+    - "-fpermissive"
+
+platform-link-flags:
+  x86_64-pc-windows-msvccoff:
+    - "/ignore:4099"
+    
+platform-defines:
+  x86_64-pc-windows-msvccoff:
+    _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS: yes
+  osx_x64_clang: {}
+  debian_x64_gcc: {}
+  
+artifacts:
+  library:
+    primary: yes
+    kind: dll craft-types
+    files:
+      - src/**/*.*
+  test:
+    kind: test
+    files:
+      - test/**/*.*
+  entry:
+    kind: exe
+    files:
+      - entry/**/*.*
