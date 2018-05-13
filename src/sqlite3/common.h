@@ -26,10 +26,7 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
 
-#pragma warning( disable : 4065 )  
-
-#include "../../deps/sqlite_modern_cpp/hdr/sqlite_modern_cpp.h"
-#pragma warning(default:4065)
+#include "sqlite3.h"
 
 // Deps
 #include "util/all.h"

@@ -18,8 +18,8 @@ vendor-dependencies:
   debian_x64_gcc: []
 
 platform-dependencies:
-  x86_64-pc-windows-msvccoff: []
-  x86_64-pc-windows-msvccoff: []
+  x86_64-pc-windows-msvccoff: 
+    - sqlite3.lib
   osx_x64_clang: []
   debian_x64_gcc: []
 

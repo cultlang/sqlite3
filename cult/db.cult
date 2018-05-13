@@ -1,0 +1,6 @@
+(require "builtin:cult/sqlite3")
+(define db (sqlite "test.db"))
+(sqlite/exec db "create table if not exists test(_id integer primary key, age int);")
+(sqlite/exec db "insert into test (age) values (?);" 20)
+(define stmt (sqlite/command db "select * from test;" ))
+(sqlite/fmap stmt (function (e) e))
