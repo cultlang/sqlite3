@@ -14,23 +14,23 @@ include-directories:
   
 vendor-dependencies:
   x86_64-pc-windows-msvccoff: []
-  osx_x64_clang: []
-  debian_x64_gcc: []
+  x86_64-apple-macosx-macho: []
+  x86_64-pc-linux-gnu: []
 
 platform-dependencies:
   x86_64-pc-windows-msvccoff: 
     - sqlite3.lib
-  osx_x64_clang: []
-  debian_x64_gcc: []
+  x86_64-apple-macosx-macho: []
+  x86_64-pc-linux-gnu: []
 
 platform-compile-flags:
   x86_64-pc-windows-msvccoff:
     - "/std:c++latest"
-  osx_x64_clang: 
+  x86_64-apple-macosx-macho: 
     - "-std=c++1z"
     - "-stdlib=libc++"
     - "-Wc++11-extensions"
-  debian_x64_gcc: 
+  x86_64-pc-linux-gnu: 
     - "-std=gnu++1z"
     - "-pthread"
     - "-fpermissive"
@@ -42,8 +42,8 @@ platform-link-flags:
 platform-defines:
   x86_64-pc-windows-msvccoff:
     _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS: yes
-  osx_x64_clang: {}
-  debian_x64_gcc: {}
+  x86_64-apple-macosx-macho: {}
+  x86_64-pc-linux-gnu: {}
   
 artifacts:
   library:
