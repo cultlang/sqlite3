@@ -26,7 +26,7 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
 
-#include "sqlite3.h"
+#include "sqlite3/sqlite3.h"
 
 // Deps
 #include "util/all.h"
