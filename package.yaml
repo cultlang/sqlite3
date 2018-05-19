@@ -20,8 +20,10 @@ vendor-dependencies:
 platform-dependencies:
   x86_64-pc-windows-msvccoff: 
     - sqlite3.lib
-  x86_64-apple-macosx-macho: []
-  x86_64-pc-linux-gnu: []
+  x86_64-apple-macosx-macho:
+    - sqlite3
+  x86_64-pc-linux-gnu:
+    - sqlite3
 
 platform-compile-flags:
   x86_64-pc-windows-msvccoff:
