@@ -5,9 +5,9 @@ version: "1.0.0"
 repo: https://github.com/cultlang/sqlite3
 entry-name: cultsqlite
 dependencies:
-  - Util@OffByOneStudios
-  - Types@OffByOneStudios
-  - Lisp@OffByOneStudios
+  - Util
+  - Types
+  - Lisp
 
 include-directories:
   - "${CMAKE_SOURCE_DIR}/deps/sqlite3"
