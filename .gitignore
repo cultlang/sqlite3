@@ -2,7 +2,7 @@
 common.cpp
 cmake/*
 CMakeLists.txt
-build
+#build
 dist
 .DS_Store
 # Prerequisites
