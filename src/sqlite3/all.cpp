@@ -40,7 +40,7 @@ instance<SqliteStatement> SqliteDatabase::makeCommand(std::string query, VarArgs
 
 	auto ptr = res->data;
 	auto fail = true;
-	for (auto i = 0; i < params.args.size(); i++)
+	for (size_t i =0; i < params.args.size(); i++)
 	{
 		auto ar = params.args[i];
 		
@@ -129,7 +129,7 @@ instance<> SqliteStatement::step()
 	{
 		auto count = sqlite3_column_count(ptr);
 		auto res = instance<library::Map>::make();
-		for (auto i = 0; i != count; i++)
+		for (size_t i =0; i != count; i++)
 		{
 			auto tid = sqlite3_column_type(ptr, i);
 			auto name = instance<std::string>::make(sqlite3_column_name(ptr, i));
